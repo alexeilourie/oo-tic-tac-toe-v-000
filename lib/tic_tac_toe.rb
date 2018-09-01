@@ -20,7 +20,7 @@ class TicTacToe
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
   def input_to_index(input)
-    index = input - 1
+    index = input.to_i - 1
     return index
   end
   def move(index, token = "X")
@@ -31,7 +31,7 @@ class TicTacToe
       return true
     else
       return false
-    end 
+    end
   end
   def valid_move?(index)
     if index >=0 && index <= 8 && !position_taken?(index)
@@ -96,7 +96,7 @@ class TicTacToe
   def draw?
     if full? && !won?
       return true
-    else 
+    else
       return false
     end
   end
@@ -120,6 +120,6 @@ class TicTacToe
       puts "Congratulations! Player #{winner} has won the game!"
     else
       puts "Cat's a game."
-    end    
+    end
   end
 end
