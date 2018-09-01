@@ -113,7 +113,7 @@ class TicTacToe
       comb1 = win_comb[0]
       return @board[comb1]
     else
-      return false
+      return nil
     end
   end
   def play
