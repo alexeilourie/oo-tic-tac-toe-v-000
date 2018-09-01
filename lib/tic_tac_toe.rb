@@ -73,8 +73,8 @@ class TicTacToe
     win_check = 0
     WIN_COMBINATIONS.each do |comb|
       comb1 = comb[0]
-      comb1 = comb[1]
-      comb1 = comb[2]
+      comb2 = comb[1]
+      comb3 = comb[2]
       if (@board[comb1] == "X" && @board[comb2] == "X" && @board[comb3] == "X") || (@board[comb1] == "O" && @board[comb2] == "O" && @board[comb3] == "O")
         win_comb = comb
         win_check = 1
