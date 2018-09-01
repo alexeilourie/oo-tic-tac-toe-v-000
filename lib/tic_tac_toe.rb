@@ -101,14 +101,14 @@ class TicTacToe
     end
   end
   def over?
-    if full? || !won?
+    if full? || !!won?
       return true
     else
       return false
     end
   end
   def winner
-    if !won?
+    if !!won?
       win_comb = won?
       comb1 = win_comb[0]
       return @board[comb1]
