@@ -108,18 +108,22 @@ class TicTacToe
     end
   end
   def winner
-    win_comb = won?
-    comb1 = win_comb[0]
-    return @board[comb1]
+    if !won?
+      win_comb = won?
+      comb1 = win_comb[0]
+      return @board[comb1]
+    else
+      return false
+    end
   end
   def play
     while !over?
       turn
     end
     if won?
-      puts "Congratulations! Player #{winner} has won the game!"
+      puts "Congratulations  #{winner}!"
     else
-      puts "Cat's a game."
+      puts "Cat's Game!"
     end
   end
 end
